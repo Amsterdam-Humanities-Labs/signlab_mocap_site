@@ -1,23 +1,31 @@
 # signlab_mocap_site
-Static landing page at mocap.signcollect.nl that links to the motion-capture tools.
+A static start page at mocap.signcollect.nl with links to the motion-capture tools.
 
 ## What it does
-- One `index.html` with four links: File Manager (`/animMIDI/public/`), 3D Studio (`/mocapStudio/3dOpname_test.html`), Avatar Player (`avatar.signcollect.nl/blendAnims/`), Vicon Dashboard (`/viconDashboard/`).
-- Redirects to `signcollect.nl/login.html` if the `sessionObject` cookie has no `userId` (convenience gate, not security).
-- POSTs `action=activity` to `signcollect.nl/users_api.php` on load.
+- One `index.html` with four links, all on signcollect.nl unless stated:
+  - File Manager: `/animMIDI/public/index.php`
+  - 3D Studio: `/mocapStudio/3dOpname_test.html`
+  - Avatar Player: `https://avatar.signcollect.nl/blendAnims/`
+  - Vicon Dashboard: `/viconDashboard/`
+- If the `sessionObject` cookie has no `userId`, it sends you to `signcollect.nl/login.html`. This is a convenience, not security.
+- On load it posts `action=activity` to `signcollect.nl/users_api.php`.
 
 ## Where it runs
-core (production): `/web/mocap_site`, vhost https://mocap.signcollect.nl
+Core server: `/web/mocap_site`, https://mocap.signcollect.nl
 
 ## Status
-production
+Production.
 
 ## How to run / deploy
-Deployed by the stack: https://github.com/Amsterdam-Humanities-Labs/signlab_signcollect-stack
-Locally: `python3 -m http.server 8000` (comment out the inline script, or it redirects to the production login).
+[signlab_signcollect-stack](https://github.com/Amsterdam-Humanities-Labs/signlab_signcollect-stack) deploys it. To preview locally, comment out the inline script first, or the page sends you to the production login:
+```bash
+python3 -m http.server 8000
+```
 
 ## Configuration
-None; every destination is a hardcoded URL in `index.html`.
+None. Every link is a fixed URL in `index.html`.
 
 ## Dependencies
-signlab_signCollect-v2 (`login.html`, `users_api.php`), the four linked apps, Bootstrap 5.3.2 and Font Awesome 6.5.1 from CDNs.
+- [signlab_signCollect-v2](https://github.com/Amsterdam-Humanities-Labs/signlab_signCollect-v2): `login.html`, `users_api.php`.
+- The four linked apps.
+- Bootstrap 5.3.2 and Font Awesome 6.5.1 from CDNs.
