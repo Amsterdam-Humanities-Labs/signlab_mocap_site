@@ -12,6 +12,7 @@ A static start page at mocap.signcollect.nl with links to the motion-capture too
 
 ## Where it runs
 Core server: `/web/mocap_site`, https://mocap.signcollect.nl
+Demo hosts: `<docroot>/mocap_site`, served at `/mocap_site/`. The deploy rewrites the links to same-origin paths; the Avatar Player link becomes a dead `/avatar-not-deployed` link.
 
 ## Status
 Production.
