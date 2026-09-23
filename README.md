@@ -4,7 +4,7 @@ A static start page at mocap.signcollect.nl with links to the motion-capture too
 ## What it does
 - One `index.html` with four links, all on signcollect.nl unless stated:
   - File Manager: `/animMIDI/public/index.php`
-  - 3D Studio: `/mocapStudio/3dOpname_test.html`
+  - 3D Studio: `/mocapStudio/capture.html`
   - Avatar Player: `https://avatar.signcollect.nl/blendAnims/`
   - Vicon Dashboard: `/viconDashboard/`
 - If the `sessionObject` cookie has no `userId`, it sends you to `signcollect.nl/login.html`. This is a convenience, not security.
