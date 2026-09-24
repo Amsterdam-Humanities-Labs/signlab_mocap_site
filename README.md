@@ -30,3 +30,10 @@ None. Every link is a fixed URL in `index.html`.
 - [signlab_signCollect-v2](https://github.com/Amsterdam-Humanities-Labs/signlab_signCollect-v2): `login.html`, `users_api.php`.
 - The four linked apps.
 - Bootstrap 5.3.2 and Font Awesome 6.5.1 from CDNs.
+
+## License and citation
+
+Apache License 2.0, copyright University of Amsterdam: see [LICENSE](LICENSE) and
+[NOTICE](NOTICE). You may use it, also commercially, as long as you credit
+Gomer Otterspeer / University of Amsterdam as the source. To cite it, use
+[CITATION.cff](CITATION.cff) (the *Cite this repository* button on GitHub) or the DOI [10.21942/uva.33980356](https://doi.org/10.21942/uva.33980356).
